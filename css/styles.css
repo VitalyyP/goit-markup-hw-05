@@ -103,8 +103,9 @@ address {
 }
 
 .header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  /* position: relative; */
+  /* padding-top: 25px; */
+  /* padding-bottom: 25px; */
   border-bottom: 1px solid #ececec;
   font-weight: 500;
   line-height: 1.14;
@@ -285,15 +286,28 @@ address {
   color: #212121;
 }
 
-.site-nav .current {
+.site-nav .current-link {
+  position: relative;
   color: var(--accent-color);
 }
 
 .site-nav .link,
 .auth-nav .link {
   display: block;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 31.5px;
+  padding-bottom: 31.5px;
+}
+
+.site-nav .current-link::after {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  left: 0;
+  /* display: block; */
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .site-nav .item:not(:last-child) {
